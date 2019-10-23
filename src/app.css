@@ -18,13 +18,24 @@ html, body {
     height: 100%;
 }
 
+header {
+  font-size: 20pt;
+}
+
+
+
+
+body {
+  font-size: 13pt;
+}
+
 html {
     font-family: "Rubik", sans-serif;
-    font-size: 14pt;
+
     line-height: 1.6;
 
     /* https://pixabay.com/photos/ship-boat-lake-sailing-boat-italy-952292/ */
-    background-color: black;
+    background-color: white;
     background-image: url(background.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -206,8 +217,18 @@ header .content h6 {
  */
 main {
     padding: var(--content-padding);
-    background: rgba(240,240,240, 0.9);
+    /* ändert die Transparenz  */
+    background: rgba(240,240,240, 0.6);
     flex: 1;
+
+    /* zentriert den text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23pt;
+    color: grey;
+
+
 }
 
 main a,
