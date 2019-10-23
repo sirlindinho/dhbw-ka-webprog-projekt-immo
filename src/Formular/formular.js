@@ -1,5 +1,7 @@
-buttonImmo.addEventListener("click", formular);
+class Formular{
+  buttonImmo.addEventListener("click", formular);
 
-function formular() {
-  alert ("Hello World!");
+  function formular() {
+    alert ("Hello World!");
+  }
 }
