@@ -1,1 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+html {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12pt;
+    background-image: url(background.jpg);
+}
+
+
+form {
+    max-width: 30em;
+
+    border: 1px solid #d0d0d0;
+    background: #f0f0f0;
+    padding: 1em;
+}
+
+form > *,
+form > .side-by-side > * {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form > .side-by-side {
+    display: flex;
+}
+
+form > .side-by-side > * {
+    margin-right: 0.25em;
+}
+
+form > .side-by-side > *:last-child {
+    margin-right: 0;
+}
+
+
+form label {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+form label:first-child {
+    margin-top: 0;
+}
+
+form label .required {
+    color: darkred;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid #bebebe;
+    padding: 0.5em;
+    margin: 0;
+    outline: none;
+}
+
+textarea {
+    height: 12em;
+    resize: none;
+    overflow: auto;
+}
+
+.button {
+  border: none;
+  font-family: inherit;
+  background-color: rgb(34, 14, 237);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.button:hover, button:focus {
+  cursor: pointer;
+  opacity: 0.75;
+}
