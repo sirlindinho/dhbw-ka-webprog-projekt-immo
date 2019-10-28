@@ -20,6 +20,7 @@
         <script src="page-overview/page-overview.js"></script>
         <script src="page-detail/page-detail.js"></script>
         <script src="page-not-found/page-not-found.js"></script>
+        <script src="Formular/formular.js"></script>
 
         <!-- Fontello Icon Font (generiert auf fontello.com) -->
         <link rel="stylesheet" href="fontello/css/fontello.css" />
@@ -41,7 +42,11 @@
               }, {
                 url: ".*",
                 klass: PageNotFound,
-              }];
+              }, {
+                url: "^/Formular/(.*)$",
+                klass: Formular,
+              }
+            ];
 
                 let app = new App("ImmoFinder", pages);
                 app.run();
@@ -97,11 +102,21 @@
             <div class="content">
 
                 <div class="button-group">
-	                 <button type="buttonImmo" class="button">Immobilie hinzufuegen</button>
+	                 <button type="button" class="button">Immobilie hinzufuegen</button>
 
+<<<<<<< HEAD
                     <input name="first_zip" type="text" placeholder="ImmoFinder durchsuchen..." />
+=======
+<<<<<<< HEAD
+                    <input name="first_zip" type="text" placeholder="Hallo" />
+                    <input name="firsst_zip" type="text" placeholder="Test" />
+
+=======
+                    <input name="first_zip" type="text" placeholder="ImmoFinder durchsuchen..." />
+>>>>>>> 1b2319b81cc00f0aa6d995756e37cb49bdae7c36
+>>>>>>> 98e57f509d75c1fa41fb94bfe6b7f47aaff07ca5
                     <div style="float:right;">
-                      <button type="button" onclick="window.location.replace('index1.html')" class="button">Suchen</button>
+                      <button type="button" class="button">Suchen</button>
 
                     </div>
                     <div style="clear:right;"></div>
