@@ -18,10 +18,10 @@ class Database {
             {
                 id:          1,
                 img:        "immobilien/1.jpg",
-                name:       "Petrine",
-                typ:        "Ewer",
-                stapellauf: 1909,
-                verbleib:   "In Fahrt",
+                name:       "Villa mit Schwimmteich",
+                typ:        "Einfamilienhaus",
+                stapellauf: 2016,
+                verbleib:   "Karlsruhe Weststadt",
                 link:       "https://de.wikipedia.org/wiki/Petrine",
             },{
                 id:          2,
