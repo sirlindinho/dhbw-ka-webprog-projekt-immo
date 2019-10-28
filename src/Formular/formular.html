@@ -1,0 +1,58 @@
+<header>
+  <meta charset="utf-8" />
+         <title>Immobilie hinzufügen</title>
+         <link rel="stylesheet" href="formular.css" />
+         <script src="formular.js"></script>
+  </header>
+  <body>
+          <h1>Immobilie hinzufügen</h1>
+
+
+              <label for="firstname">
+                  Ihr Name:
+              </label>
+              <div class="side-by-side">
+                  <input name="firstname" type="text" placeholder="Vorname" />
+                  <input name="lastname" type="text" placeholder="Nachname" />
+              </div>
+
+
+              <label for="email">
+                  E-Mail:
+              </label>
+              <input name="email" type="email" />
+
+              <label for="telefon">
+                Telefonnummer:
+              </label>
+              <input name="tel" type="text" />
+
+              <label for="Wohnflaeche">
+                  Wohnfläche und Zimmer:
+              </label>
+              <input name="flaeche" type="text" placeholder="Wohnfläche"/>
+              <input name="zimmer" type="text" placeholder="Zimmer"/>
+
+              <label for="Mietpreis">
+                  Mietpreis:
+              </label>
+              <input name="preis" type="text" placeholder="Kaltmiete"/>
+              <input name="nk" type="text" placeholder="Nebenkosten"/>
+
+
+              <label for="message">
+                  Beschreibung ihrer Immobilie:
+                  <p>
+                    Geben sie hier Details zu Ihrer Immobilie an. (Aufteilung, Lage usw.)
+                    </p>
+              </label>
+              <textarea name="beschreibung"></textarea>
+
+              <form class="box" method="post" action="" enctype="multipart/form-data">
+                <div class="box__input">
+                    <label for="file"><strong>Bilder Ihrer Immobilie</strong></label>
+                      <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                      <button class="box__button" type="submit">Hochladen</button>
+                </div>
+              </form>
+</body>

@@ -20,6 +20,7 @@
         <script src="page-overview/page-overview.js"></script>
         <script src="page-detail/page-detail.js"></script>
         <script src="page-not-found/page-not-found.js"></script>
+        <script src="Formular/formular.js"></script>
 
         <!-- Fontello Icon Font (generiert auf fontello.com) -->
         <link rel="stylesheet" href="fontello/css/fontello.css" />
@@ -41,7 +42,11 @@
               }, {
                 url: ".*",
                 klass: PageNotFound,
-              }];
+              }, {
+                url: "^/Formular/(.*)$",
+                klass: Formular,
+              }
+            ];
 
                 let app = new App("Segelbote", pages);
                 app.run();
