@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-
-html {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 12pt;
-    background-image: url(background.jpg);
-}
-
-
 form {
     max-width: 30em;
 

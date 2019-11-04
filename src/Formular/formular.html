@@ -1,61 +1,61 @@
+<!-- Kopfbereich -->
 <header>
-  <meta charset="utf-8" />
-         <title>Immobilie hinzufügen</title>
-         <link rel="stylesheet" href="formular.css" />
-         <script src="formular.js"></script>
-  </header>
-  <body>
-          <h1>Immobilie hinzufügen</h1>
+    <h1>Immobilie anlegen</h1>
+</header>
+
+<!-- Hauptbereich -->
+<main>
+    <h1>Immobilie hinzufügen</h1>
+
+    <form>
+      <label for="firstname">
+          Ihr Name:
+      </label>
+      <div class="side-by-side">
+          <input name="firstname" type="text" placeholder="Vorname" />
+          <input name="lastname" type="text" placeholder="Nachname" />
+      </div>
+      <p></p>
 
 
-              <label for="firstname">
-                  Ihr Name:
-              </label>
-              <div class="side-by-side">
-                  <input name="firstname" type="text" placeholder="Vorname" />
-                  <input name="lastname" type="text" placeholder="Nachname" />
-              </div>
-              <p></p>
+      <label for="email">
+          E-Mail:
+      </label>
+      <input name="email" type="email" placeholder="E-Mail" />
+      <p></p>
+      <label for="telefon">
+        Telefonnummer:
+      </label>
+      <input name="tel" type="text" placeholder="Telefon"/>
+      <p></p>
+      <label for="Wohnflaeche">
+          Wohnfläche und Zimmer:
+      </label>
+      <input name="flaeche" type="text" placeholder="Wohnfläche"/>
+      <input name="zimmer" type="text" placeholder="Zimmer"/>
+      <p></p>
+      <label for="Mietpreis">
+          Mietpreis:
+      </label>
+      <input name="preis" type="text" placeholder="Kaltmiete"/>
+      <input name="nk" type="text" placeholder="Nebenkosten"/>
+      <p></p>
 
+      <label for="message">
+          <strong>Beschreibung ihrer Immobilie:</strong>
+          <p>
+            Geben sie hier Details zu Ihrer Immobilie an. (Aufteilung, Lage usw.)
+            </p>
+      </label>
+      <textarea name="beschreibung" cols="35" rows="4"placeholder="Angaben zu Ihrer Immobilie"></textarea>
+      <p></p>
 
-              <label for="email">
-                  E-Mail:
-              </label>
-              <input name="email" type="email" placeholder="E-Mail" />
-              <p></p>
-              <label for="telefon">
-                Telefonnummer:
-              </label>
-              <input name="tel" type="text" placeholder="Telefon"/>
-              <p></p>
-              <label for="Wohnflaeche">
-                  Wohnfläche und Zimmer:
-              </label>
-              <input name="flaeche" type="text" placeholder="Wohnfläche"/>
-              <input name="zimmer" type="text" placeholder="Zimmer"/>
-              <p></p>
-              <label for="Mietpreis">
-                  Mietpreis:
-              </label>
-              <input name="preis" type="text" placeholder="Kaltmiete"/>
-              <input name="nk" type="text" placeholder="Nebenkosten"/>
-              <p></p>
+      <div class="box__input">
+          <label for="file">Bilder Ihrer Immobilie</label>
+            <input class="" type="file" name="fileupload" id="file" data-multiple-caption="{count} files selected" multiple />
+            <button type="button" class="button" id="ImageUploadButton">Hochladen</button>
+      </div>
 
-              <label for="message">
-                  <strong>Beschreibung ihrer Immobilie:</strong>
-                  <p>
-                    Geben sie hier Details zu Ihrer Immobilie an. (Aufteilung, Lage usw.)
-                    </p>
-              </label>
-              <textarea name="beschreibung" cols="35" rows="4"placeholder="Angaben zu Ihrer Immobilie"></textarea>
-              <p></p>
-
-              <form class="box" method="post" action="" enctype="multipart/form-data">
-                <div class="box__input">
-                    <label for="file">Bilder Ihrer Immobilie</label>
-                      <input class="" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
-                      <button class= "button" type="submit">Hochladen</button>
-                </div>
-              </form>
-              <button type="button" class= "button"  name="fertig">Immobilie hinzufügen</button>
-</body>
+      <button type="submit" class="button"  name="fertig">Immobilie hinzufügen</button>
+    </form>
+</main>

@@ -9,21 +9,21 @@ class PageNotFound {
     let css = await fetch ("page-not-found/page-not-found.css");
 
     if (html.ok && css.ok){
-      html await html.text();
-      css await css.text();
+      html = await html.text();
+      css = await css.text();
     } else {
       console.error("Fehler beim Laden des HTML/CSS-Inhalts");
     }
 
     // Seite anzeigen
 
-    let pageDom = document.createELement("div");
+    let pageDom = document.createElement("div");
     pageDom.innerHTML = html;
 
-    this_app.setPageTitle("Seite nicht gefunden");
-    this_app.setPageCss(css);
-    this_app.setPageHeader(pageDom.querySelector("header"));
-    this_app.setPageContent(pageDom.querySelector("main"));
+    this._app.setPageTitle("Seite nicht gefunden");
+    this._app.setPageCss(css);
+    this._app.setPageHeader(pageDom.querySelector("header"));
+    this._app.setPageContent(pageDom.querySelector("main"));
 
 
   }

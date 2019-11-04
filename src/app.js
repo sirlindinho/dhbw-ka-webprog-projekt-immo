@@ -21,6 +21,10 @@ class App {
         let backIcon = document.querySelector("header nav .go-back a");
         backIcon.addEventListener("click", () => window.history.back());
 
+        // Klick auf Button "Immobilie anlegen"
+        let createButton = document.querySelector("#ImmoButton");
+        createButton.addEventListener("click", () => location.hash = "/Formular/");
+
         // Inhalt der ersten Seite anzeigen
         window.addEventListener("hashChange", () => this._handleRouting())
         this._handleRouting();
@@ -42,6 +46,7 @@ class App {
       let pageUrl = location.hash.slice(1); // alles was hinter Raute # steht
       if (pageUrl.length === 0) pageUrl = "/";    // auf Startseite gehen
 
+      let matches = null;
       let page = this._pages.find(p => matches = pageUrl.match(p.url));
 
       if (!page) {

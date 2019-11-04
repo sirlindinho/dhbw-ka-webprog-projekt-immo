@@ -33,18 +33,19 @@
         <script>
             // Warten, bis die Seite komplett geladen wurde
             window.addEventListener("load", () => {
-              let pages [{
+              let pages = [{
                 url: "^/$",     // ^ = Nichts am Anfang, $ Nichts am Ende
                 klass: PageOverview,
               }, {
                 url: "^/Detail/(.*)$",   // .= Beliebiges Zeichen, * = Beliebig Oft
                 klass: PageDetail,       // () SubString rausschneiden
+              },
+              {
+                url: "^/Formular/$",
+                klass: Formular,
               }, {
                 url: ".*",
                 klass: PageNotFound,
-              }, {
-                url: "^/Formular/(.*)$",
-                klass: Formular,
               }
             ];
 
@@ -99,23 +100,19 @@
                 </ul>
             </nav>
 
+
+              <div class="button-group">
+                  <button type="button" class="button" id="ImmoButton">Immobilie hinzufuegen</button>
+                  <input name="first_zip" type="text" placeholder="ImmoFinder durchsuchen..." />
+
+                  <div style="float:right;">
+                    <button type="button" class="button">Suchen</button>
+                  </div>
+
+                  <div style="clear:right;"></div>
+            </div>
+
             <div class="content">
-
-                <div class="button-group">
-	                 <button type="button" class="button" name= "ImmoButton">
-                     Immobilie hinzufuegen</button>
-
-                    <input name="first_zip" type="text" placeholder="ImmoFinder durchsuchen..." />
-
-                    <div style="float:right;">
-                      <button type="button" class="button">Suchen</button>
-
-                    </div>
-                    <div style="clear:right;"></div>
-
-
-
-                   </div>
             </div>
 
         </header>
