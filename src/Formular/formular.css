@@ -50,19 +50,3 @@ textarea {
     resize: none;
     overflow: auto;
 }
-
-.button {
-  border: none;
-  font-family: inherit;
-  background-color: rgb(34, 14, 237);
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 12px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
-}
-
-.button:hover, button:focus {
-  cursor: pointer;
-  opacity: 0.75;
-}

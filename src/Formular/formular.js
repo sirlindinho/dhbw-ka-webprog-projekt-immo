@@ -25,7 +25,7 @@ class Formular {
     let imageUploadButton = pageDom.querySelector("#ImageUploadButton");
     imageUploadButton.addEventListener("click", this._onImageUploadClicked);
 
-    this._app.setPageTitle("Immobilie hinzufügen");
+    this._app.setPageTitle("Immobilie hinzufügen", {isSubPage: true});
     this._app.setPageCss(css);
     this._app.setPageHeader(pageDom.querySelector("header"));
     this._app.setPageContent(pageDom.querySelector("main"));
@@ -53,5 +53,15 @@ class Formular {
   _onFormSubmitClicked(event) {
     event.preventDefault();
     console.log("Vorname: ", event.target.firstname.value);
+    console.log("Nachname: ", event.target.lastname.value);
+    console.log("Email: ", event.target.email.value);
+    console.log("Telefon: ", event.target.tel.value);
+    console.log("Wohnfläche: ", event.target.flaeche.value);
+    console.log("Zimmer: ", event.target.zimmer.value);
+    console.log("Preis: ", event.target.preis.value);
+    console.log("Nebenkosten: ", event.target.nk.value);
+    console.log("Beschreibung: ", event.target.beschreibung.value);
+
+
   }
 }
