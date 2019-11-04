@@ -37,10 +37,13 @@ class PageDetail {
         // Seite zur Anzeige bringen
         let pageDom = this._processTemplate(html);
 
+
         this._app.setPageTitle(`ImmoFinder ${this._data.name}`, {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
+        
+        document.getElementById("detail-paragraph").style.display="none";
     }
 
      /**
@@ -69,6 +72,8 @@ class PageDetail {
         pageDom.querySelectorAll(".id").forEach(e => e.textContent = this._recordId);
         pageDom.querySelector("#show-more-button").addEventListener("click", () => this._onShowMoreButtonClicked());
 
+        pageDom.querySelector("#detailbeschreibung-button").addEventListener("click", () => this._onDetailbeschreibungButtonClicked());
+
         // Fertig bearbeitetes HTML-Element zurückgeben
         return pageDom;
     }
@@ -78,6 +83,18 @@ class PageDetail {
      * Button aufgerufen wird.
      */
     _onShowMoreButtonClicked() {
-        alert(this._data.name);
+        //alert(this._data.name);
+        document.getElementById("übersicht-paragraph").style.display="block";
+        document.getElementById("detail-paragraph").style.display="none";
+        document.getElementById("show-more-button").classList.add('active');
+        document.getElementById("detailbeschreibung-button").classList.remove('active');
+    }
+
+    _onDetailbeschreibungButtonClicked(){
+        //alert(this._data.name);
+        document.getElementById("übersicht-paragraph").style.display="none";
+        document.getElementById("detail-paragraph").style.display="block";
+        document.getElementById("detailbeschreibung-button").classList.add('active');
+        document.getElementById("show-more-button").classList.remove('active');
     }
 }
