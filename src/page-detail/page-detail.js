@@ -56,8 +56,8 @@ class PageDetail {
         html = html.replace(/{IMG}/g, this._data.img);
         html = html.replace(/{NAME}/g, this._data.name);
         html = html.replace(/{TYP}/g, this._data.typ);
-        html = html.replace(/{STAPELLAUF}/g, this._data.stapellauf);
-        html = html.replace(/{VERBLEIB}/g, this._data.verbleib);
+        html = html.replace(/{BAUJAHR}/g, this._data.baujahr);
+        html = html.replace(/{STADTTEIL}/g, this._data.stadtteil);
         html = html.replace(/{LINK}/g, this._data.link);
 
         // HTML-Template in echte DOM-Objekte umwandeln, damit wir es mit den
