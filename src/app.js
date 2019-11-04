@@ -29,6 +29,10 @@ class App {
         window.addEventListener("hashChange", () => this._handleRouting())
         this._handleRouting();
 
+        // Suchen button
+        let searchButton = document.querySelector("#SuchenButton");
+        searchButton.addEventListener("click", () => location.hash = "/Suche/")
+
     }
 
     toggleHamburgerMenu() {
