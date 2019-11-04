@@ -44,9 +44,6 @@ form label:first-child {
     margin-top: 0;
 }
 
-form label .required {
-    color: darkred;
-}
 
 input,
 textarea,

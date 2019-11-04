@@ -24,6 +24,7 @@ class App {
         // Inhalt der ersten Seite anzeigen
         window.addEventListener("hashChange", () => this._handleRouting())
         this._handleRouting();
+
     }
 
     toggleHamburgerMenu() {
