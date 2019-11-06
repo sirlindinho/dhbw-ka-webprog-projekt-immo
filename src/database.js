@@ -20,7 +20,7 @@ class Database {
                 img:        "immobilien/1.jpg",
                 name:       "Villa mit Schwimmteich",
                 typ:        "Einfamilienhaus",
-                baujahr: 2016,
+                baujahr:    2016,
                 stadtteil:   "Karlsruhe Weststadt",
                 link:       "https://de.wikipedia.org/wiki/Petrine",
             },{
@@ -28,7 +28,7 @@ class Database {
                 img:        "immobilien/2.jpg",
                 name:       "Falado",
                 typ:        "Brigatine",
-                baujahr: 1968,
+                baujahr:    1968,
                 stadtteil:   "Westlich von Island gesunken",
                 link:       "https://de.wikipedia.org/wiki/Falado_von_Rhodos",
             },{
@@ -36,7 +36,7 @@ class Database {
                 img:        "immobilien/3.jpg",
                 name:       "Gorch Fock",
                 typ:        "Segelschiff",
-                baujahr: 1958,
+                baujahr:    1958,
                 stadtteil:   "In Fahrt",
                 link:       "https://de.wikipedia.org/wiki/Gorch_Fock_(Schiff,_1958)",
             },{
@@ -44,7 +44,7 @@ class Database {
                 img:        "immobilien/4.jpg",
                 name:       "Mare Frisium",
                 typ:        "Dreimastmarstoppsegelschoner",
-                baujahr: 1916,
+                baujahr:    1916,
                 stadtteil:   "In Fahrt",
                 link:       "https://de.wikipedia.org/wiki/Mare_Frisium",
             },{
@@ -52,7 +52,7 @@ class Database {
                 img:        "immobilien/5.jpg",
                 name:       "Preußen",
                 typ:        "Frachtsegler",
-                baujahr: 1902,
+                baujahr:    1902,
                 stadtteil:   "Kollision im Ärmelkanal",
                 link:       "https://de.wikipedia.org/wiki/Preu%C3%9Fen_(Schiff,_1902)",
             },{
@@ -60,7 +60,7 @@ class Database {
                 img:        "immobilien/6.jpg",
                 name:       "HMS Victory",
                 typ:        "Linienschiff",
-                baujahr: 1765,
+                baujahr:    1765,
                 stadtteil:   "Museum im Portsmouth",
                 link:       "https://de.wikipedia.org/wiki/HMS_Victory",
             },{
@@ -68,7 +68,7 @@ class Database {
                 img:        "immobilien/7.jpg",
                 name:       "Schulschiff Deutschland",
                 typ:        "Segelschulschiff",
-                baujahr: 1927,
+                baujahr:    1927,
                 stadtteil:   "Kulturdenkmal in Bremen-Vegesack",
                 link:       "https://de.wikipedia.org/wiki/Schulschiff_Deutschland",
             },

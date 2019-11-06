@@ -36,14 +36,11 @@
     </div>
 
     <ul class="tab-buttons">
-        <li class="active">
+        <li id="show-more-button" class="active">
             Übersicht
         </li>
-        <li>
+        <li id="detailbeschreibung-button">
             Detailbeschreibung
-        </li>
-        <li>
-            Fotogallerie
         </li>
     </ul>
 </header>
@@ -51,8 +48,15 @@
 <main>
     <img src="{IMG}" alt="" />
 
-    <p>
-        Um mehr Details zur Immobilie "{NAME}" anzuzeigen, drücken Sie bitte auf den "Mehr anzeigen"-Button. <br />
-    </p>
-    <button id="show-more-button">Mehr anzeigen</button>
+    <div id="übersicht-paragraph">
+        <p>
+            Grobe Details zur Immobilie werden hier zu finden sein.<br />
+            </p>
+    </div>
+
+    <div id="detail-paragraph">
+        <p>
+            Alle Details zur Immobilie werden hier zu finden sein.<br />
+            </p>
+    </div>
 </main>
