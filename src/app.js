@@ -8,8 +8,6 @@ class App {
       this._titel = title;
       this._pages = pages;
       this._currentPage = null;
-
-      this.database = new Database();
     }
 
     run() {
@@ -31,7 +29,7 @@ class App {
 
         // Suchen button
         let searchButton = document.querySelector("#SuchenButton");
-        searchButton.addEventListener("click", () => location.hash = "/Suche/")
+        searchButton.addEventListener("click", () => location.hash = "/Suche/");
 
     }
 

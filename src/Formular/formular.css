@@ -28,16 +28,13 @@ form > .side-by-side > *:last-child {
 
 form label {
     font-weight: bold;
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 
 form label:first-child {
     margin-top: 0;
 }
 
-
-input,
-textarea,
 select {
     border: 1px solid #bebebe;
     padding: 0.5em;
@@ -46,7 +43,21 @@ select {
 }
 
 textarea {
-    height: 12em;
+    height: 8em;
     resize: none;
     overflow: auto;
+}
+text {
+  height: 2em;
+}
+input {
+  height: 2em;
+}
+.alert{
+  text-align: center;
+  padding: 10px;
+  background: #79c879;
+  color: #fff;
+  margin-bottom: 10px;
+  display: none;
 }

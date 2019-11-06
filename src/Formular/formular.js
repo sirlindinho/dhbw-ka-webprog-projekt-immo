@@ -1,5 +1,22 @@
 class Formular {
+
   constructor(app) {
+    var firebaseConfig = {
+    apiKey: "AIzaSyANzNCm5l4rrBzV5Ki0iJEZNjz-6ga4SI4",
+    authDomain: "immo-webprog-2019.firebaseapp.com",
+    databaseURL: "https://immo-webprog-2019.firebaseio.com",
+    projectId: "immo-webprog-2019",
+    storageBucket: "immo-webprog-2019.appspot.com",
+    messagingSenderId: "249226224804",
+    appId: "1:249226224804:web:5861c61756df569252f231",
+    measurementId: "G-FJDCMVG1JY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  var messagesRef = firebase.database().ref('messages');
+
     this._app = app;
   }
 
@@ -30,7 +47,7 @@ class Formular {
     this._app.setPageHeader(pageDom.querySelector("header"));
     this._app.setPageContent(pageDom.querySelector("main"));
   }
-
+  // Bild
   async _onImageUploadClicked(event) {
     let fileUploadElement = document.querySelector("input[name='fileupload']");
 
@@ -49,19 +66,47 @@ class Formular {
       await fileReader.readAsDataURL(file);
     }
   }
+  // Formular
 
   _onFormSubmitClicked(event) {
     event.preventDefault();
-    console.log("Vorname: ", event.target.firstname.value);
-    console.log("Nachname: ", event.target.lastname.value);
-    console.log("Email: ", event.target.email.value);
-    console.log("Telefon: ", event.target.tel.value);
-    console.log("Wohnfläche: ", event.target.flaeche.value);
-    console.log("Zimmer: ", event.target.zimmer.value);
-    console.log("Preis: ", event.target.preis.value);
-    console.log("Nebenkosten: ", event.target.nk.value);
-    console.log("Beschreibung: ", event.target.beschreibung.value);
+    var firstname = getInputValues('firstname');
+    var lastname = getInputValues('lastname');
+    var email = getInputValues('email');
+    var tel = getInputValues('tel');
+    var flaeche = getInputValues('flaeche');
+    var zimmer = getInputValues('zimmer');
+    var preis = getInputValues('preis');
+    var nk = getInputValues('nk');
+    var beschreibung = getInputValues('beschreibung');
 
+    saveMessage (firstname, lastname, email, tel, flaeche, zimmer, preis, nk, beschreibung);
 
-  }
+  function getInputValues(id) {
+    return document.getElementById(id).value;
+}
+
+// Nachricht speichern
+ function saveMessage (firstname, lastname, email, tel, flaeche, zimmer, preis, nk, beschreibung){
+  var messagesRef = firebase.database().ref('messages');
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      telefon: tel,
+      flaeche: flaeche,
+      zimmer: zimmer,
+      preis: preis,
+      nk: nk,
+      beschreibung: beschreibung
+      });
+    }
+  // Benachrichtigung
+  document.querySelector('.alert').style.display= 'block';
+
+  setTimeout(function(){
+    document.querySelector('.alert').style.display= 'none';
+  }, 5000)
+}
 }

@@ -30,9 +30,7 @@ class PageOverview {
 
         // Seite zur Anzeige bringen
         let pageDom = document.createElement("div");
-        pageDom.innerHTML = html;
-
-        this._renderImmoTiles(pageDom);
+        
 
         this._app.setPageTitle("Startseite");
         this._app.setPageCss(css);
@@ -49,15 +47,6 @@ class PageOverview {
      */
     _renderImmoTiles(pageDom) {
         let mainElement = pageDom.querySelector("main");
-        let templateElement = pageDom.querySelector("#template-tile");
-
-        this._app.database.getAllRecords().forEach(immobilien => {
-            let html = templateElement.innerHTML;
-            html = html.replace("{HREF}", `#/Detail/${immobilien.id}`);
-            html = html.replace("{IMG}", immobilien.img);
-            html = html.replace("{NAME}", immobilien.name);
-
-            mainElement.innerHTML += html;
-        });
+        let templateElement = pageDom.querySelector("#template-tile")
     }
 }
