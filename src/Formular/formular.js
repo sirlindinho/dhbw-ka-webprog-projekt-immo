@@ -16,6 +16,7 @@ class Formular {
   firebase.analytics();
 
   var messagesRef = firebase.database().ref('messages');
+  var storageRef = firebase.storage();
 
     this._app = app;
   }
@@ -48,7 +49,7 @@ class Formular {
     this._app.setPageContent(pageDom.querySelector("main"));
   }
   // Bild
-  async _onImageUploadClicked(event) {
+    async _onImageUploadClicked(event) {
     let fileUploadElement = document.querySelector("input[name='fileupload']");
 
     for (let i = 0; i < fileUploadElement.files.length; i++) {
@@ -61,11 +62,16 @@ class Formular {
         console.log("Data-URL: ", fileReader.result);
         // Data-URL in der Datenbank ablegen
         // Später die Date-URL als <img href="..."> anzeigen
+        var storage = firebase.storage();
+        var storageRef = firebase.storage().ref('Immobilien/');
+        var fileUpload = document.getElementById('fileUpload');
+        var uploadTask = storage.ref('Immobilien/' + file.name);
+          uploadTask.put(file);
       });
+    await fileReader.readAsDataURL(file);
 
-      await fileReader.readAsDataURL(file);
-    }
   }
+}
   // Formular
 
   _onFormSubmitClicked(event) {
@@ -108,5 +114,6 @@ class Formular {
   setTimeout(function(){
     document.querySelector('.alert').style.display= 'none';
   }, 5000)
+  document.getElementById('immoformular').reset();
 }
 }
