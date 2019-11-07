@@ -1,19 +1,6 @@
 class Formular {
 
   constructor(app) {
-    var firebaseConfig = {
-    apiKey: "AIzaSyANzNCm5l4rrBzV5Ki0iJEZNjz-6ga4SI4",
-    authDomain: "immo-webprog-2019.firebaseapp.com",
-    databaseURL: "https://immo-webprog-2019.firebaseio.com",
-    projectId: "immo-webprog-2019",
-    storageBucket: "immo-webprog-2019.appspot.com",
-    messagingSenderId: "249226224804",
-    appId: "1:249226224804:web:5861c61756df569252f231",
-    measurementId: "G-FJDCMVG1JY"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
 
   var messagesRef = firebase.database().ref('messages');
   var storageRef = firebase.storage();

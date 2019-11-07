@@ -8,9 +8,26 @@ class App {
       this._titel = title;
       this._pages = pages;
       this._currentPage = null;
+      var firebaseConfig = {
+      apiKey: "AIzaSyANzNCm5l4rrBzV5Ki0iJEZNjz-6ga4SI4",
+      authDomain: "immo-webprog-2019.firebaseapp.com",
+      databaseURL: "https://immo-webprog-2019.firebaseio.com",
+      projectId: "immo-webprog-2019",
+      storageBucket: "immo-webprog-2019.appspot.com",
+      messagingSenderId: "249226224804",
+      appId: "1:249226224804:web:5861c61756df569252f231",
+      measurementId: "G-FJDCMVG1JY"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
     }
 
     run() {
+
+       window.addEventListener("hashchange", () => this._handleRouting());
+       this._handleRouting();
+
         // Klick auf das Hamburger-Menu abfangen
         let menuIcon = document.querySelector("header nav .toggle-menu a");
         menuIcon.addEventListener("click", this.toggleHamburgerMenu);
@@ -22,10 +39,6 @@ class App {
         // Klick auf Button "Immobilie anlegen"
         let createButton = document.querySelector("#ImmoButton");
         createButton.addEventListener("click", () => location.hash = "/Formular/");
-
-        // Inhalt der ersten Seite anzeigen
-        window.addEventListener("hashChange", () => this._handleRouting())
-        this._handleRouting();
 
         // Suchen button
         let searchButton = document.querySelector("#SuchenButton");
