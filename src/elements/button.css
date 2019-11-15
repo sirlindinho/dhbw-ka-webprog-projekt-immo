@@ -3,10 +3,13 @@
  */
 
 button {
-    font-size: 90%;
+    font-size: 60%;
 
     border: 0;
-    padding: 1em;
+    height: 60px;
+    text-align: center;
+
+
 
     color: white;
     background-color: rgb(17, 68, 121);
