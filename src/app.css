@@ -27,13 +27,13 @@ html, body {
 
 header {
   font-size: 20pt;
+
 }
-
-
 
 
 body {
   font-size: 13pt;
+
 }
 
 html {
@@ -225,7 +225,8 @@ header .content h6 {
 main {
     padding: var(--content-padding);
     /* ändert die Transparenz  */
-    background: rgba(240,240,240, 0.6);
+    background: rgba(240,240,240, 0.7);
+    text-align: center;
     flex: 1;
 
     /* zentriert den text */

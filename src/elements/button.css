@@ -20,3 +20,11 @@ button:hover {
     cursor: pointer;
     background-color: rgb(28, 88, 150);
 }
+input{
+
+  height: 30px;
+  width: inherit;
+}
+span{
+  color: black;
+}
