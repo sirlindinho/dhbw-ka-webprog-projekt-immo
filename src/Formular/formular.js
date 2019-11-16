@@ -71,9 +71,10 @@ class Formular {
     var zimmer = getInputValues('zimmer');
     var preis = getInputValues('preis');
     var nk = getInputValues('nk');
+    var baujahr = getInputValues('baujahr');
     var beschreibung = getInputValues('beschreibung');
 
-    saveMessage (firstname, lastname, email, tel, flaeche, zimmer, preis, nk, beschreibung);
+    saveMessage (firstname, lastname, email, tel, flaeche, zimmer, preis, nk, baujahr, beschreibung);
 
   function getInputValues(id) {
     return document.getElementById(id).value;
@@ -92,6 +93,7 @@ class Formular {
       zimmer: zimmer,
       preis: preis,
       nk: nk,
+      baujahr: baujahr,
       beschreibung: beschreibung
       });
     }

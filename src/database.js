@@ -22,7 +22,7 @@ class Database {
                 typ:        "Einfamilienhaus",
                 baujahr:    2016,
                 stadtteil:   "Karlsruhe Weststadt",
-                link:       "https://de.wikipedia.org/wiki/Petrine",
+
             },{
                 id:          2,
                 img:        "immobilien/2.jpg",
@@ -30,7 +30,7 @@ class Database {
                 typ:        "Einfamilienhaus",
                 baujahr:    2018,
                 stadtteil:   "Karlsruhe Oststadt",
-                link:       "https://de.wikipedia.org/wiki/Falado_von_Rhodos",
+
             },{
                 id:          3,
                 img:        "immobilien/3.jpg",
@@ -38,7 +38,7 @@ class Database {
                 typ:        "Zweifamilienhaus",
                 baujahr:    2015,
                 stadtteil:   "Stutensee",
-                link:       "https://de.wikipedia.org/wiki/Gorch_Fock_(Schiff,_1958)",
+
             },{
                 id:          4,
                 img:        "immobilien/4.jpg",
@@ -46,7 +46,7 @@ class Database {
                 typ:        "Einfamilienhaus,
                 baujahr:    2018,
                 stadtteil:   "Karlsruhe Nordstadt",
-                link:       "https://de.wikipedia.org/wiki/Mare_Frisium",
+
             },{
                 id:          5,
                 img:        "immobilien/5.jpg",
@@ -54,7 +54,7 @@ class Database {
                 typ:        "Einfamilienhaus",
                 baujahr:    2010,
                 stadtteil:   "Karlsruhe Durlach",
-                link:       "https://de.wikipedia.org/wiki/Preu%C3%9Fen_(Schiff,_1902)",
+
             },{
                 id:          6,
                 img:        "immobilien/6.jpg",
@@ -62,7 +62,7 @@ class Database {
                 typ:        "Zweifamilienhaus",
                 baujahr:    2011,
                 stadtteil:   "Karlsruhe Oststadt",
-                link:       "https://de.wikipedia.org/wiki/HMS_Victory",
+
             },{
                 id:          7,
                 img:        "immobilien/7.jpg",
@@ -70,7 +70,7 @@ class Database {
                 typ:        "Einfamilienhaus",
                 baujahr:    2012,
                 stadtteil:   "Karlsruhe Südstadt",
-                link:       "https://de.wikipedia.org/wiki/Schulschiff_Deutschland",
+              
             },
         ];
     }
