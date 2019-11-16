@@ -30,9 +30,9 @@ class PageOverview {
 
         // Seite zur Anzeige bringen
         let pageDom = document.createElement("div");
-        
 
-        this._app.setPageTitle("Startseite");
+
+        this._app.setPageTitle("ImmoFinder Karlsruhe");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
