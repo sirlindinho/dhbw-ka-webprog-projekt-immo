@@ -67,6 +67,8 @@ class Formular {
     var lastname = getInputValues('lastname');
     var email = getInputValues('email');
     var tel = getInputValues('tel');
+    var immoname = getInputValues('immoname');
+    var idnummer = getInputValues('idnummer');
     var flaeche = getInputValues('flaeche');
     var zimmer = getInputValues('zimmer');
     var preis = getInputValues('preis');
@@ -89,6 +91,8 @@ class Formular {
       lastname: lastname,
       email: email,
       telefon: tel,
+      immoname: immoname,
+      idnummer: idnummer,
       flaeche: flaeche,
       zimmer: zimmer,
       preis: preis,

@@ -43,7 +43,7 @@ class Database {
                 id:          4,
                 img:        "immobilien/4.jpg",
                 name:       "Villa mit Garten und Pool",
-                typ:        "Einfamilienhaus,
+                typ:        "Einfamilienhaus",
                 baujahr:    2018,
                 stadtteil:   "Karlsruhe Nordstadt",
 
@@ -70,8 +70,18 @@ class Database {
                 typ:        "Einfamilienhaus",
                 baujahr:    2012,
                 stadtteil:   "Karlsruhe Südstadt",
-              
+
             },
+            {
+                id:          8,
+                img:        "immobilien/8.jpg",
+                name:       "Schönes Einfamilienhaus",
+                typ:        "Einfamilienhaus",
+                baujahr:    2018,
+                stadtteil:   "Karlsruhe Oststadt",
+
+            },
+
         ];
     }
 

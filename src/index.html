@@ -26,7 +26,7 @@
         <script src="page-detail/page-detail.js"></script>
         <script src="page-not-found/page-not-found.js"></script>
         <script src="Formular/formular.js"></script>
-        <script src="Suche/suche.js"></script>
+
 
 
         <!-- Fontello Icon Font (generiert auf fontello.com) -->
@@ -50,9 +50,6 @@
                 url: "^/Formular/$",
                 klass: Formular,
               }, {
-                url: "^/Suche/$",
-                klass: Suche,
-              },{
                 url: ".*",
                 klass: PageNotFound,
               }
@@ -86,40 +83,12 @@
                         </a>
                     </li>
                 </ul>
-
-                <!-- Übergreifendes App-Menü -->
-                <ul class="menu-right small-screen-hidden">
-                    <li>
-                        <a href="#/messages">
-                            <i class="icon-chat-empty"></i>
-                            <span class="small-screen-only">
-                                Benachrichtigungen
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/profile">
-                            <i class="icon-user"></i>
-                            <span class="small-screen-only">
-                                Benutzerprofil
-                            </span>
-                        </a>
-                    </li>
-                </ul>
             </nav>
 
 
               <div class="button-group">
                   <button type="button" class="button" id="ImmoButton">Immobilie hinzufügen</button>
-
-                  <div style="float:right;">
-                      <input name="first_zip" type="text" placeholder="ImmoFinder durchsuchen..." />
-                    <button type="button" class="button" id ="SuchenButton" = >Suchen</button>
-                  </div>
-
-                  <div style="clear:right;"></div>
-            </div>
-
+              </div>
             <div class="content">
             </div>
 

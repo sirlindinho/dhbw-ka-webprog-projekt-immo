@@ -1,35 +1,39 @@
-/**
- * Stylesheet zur Klasse PageOverview: Startseite der App
- */
-
-.tile {
-    display: inline-block;
-
-    border: 1px solid lightgrey;
-    background: rgba(250, 250, 250);
-    padding: 0.5em;
-    margin: 0.5em;
-
-    transition: transform 0.5s, background 0.5s;
-    transform: scale(1);
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px;
 }
 
-.tile img {
-    width: 20em;
-    height: 20em;
+.column {
+  flex: 100%;
+  max-width: 100%;
+  padding: 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.column img:hover{
+  background: white;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
     max-width: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.tile a,
-.tile a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.tile:hover {
-    background: white;
-    transform: scale(1.01) rotate(0.5deg);
-    cursor: pointer;
+  }
 }
