@@ -21,6 +21,7 @@ class App {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+
     }
 
     run() {

@@ -47,6 +47,7 @@ class Formular {
         console.log("Dateiname: ", file.name);
         console.log("MIME-Typ: ", file.type);
         console.log("Data-URL: ", fileReader.result);
+        var dataurl = fileReader.result;
         // Data-URL in der Datenbank ablegen
         // Später die Date-URL als <img href="..."> anzeigen
         var storage = firebase.storage();

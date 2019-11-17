@@ -7,10 +7,10 @@
             <div class="boat-info">
                 <div class="field">
                     <div class="label">
-                        Typ:
+                        Preis (+ Nebenkosten):
                     </div>
                     <div class="value">
-                        {TYP}
+                        {PREIS} (+ {NK})
                     </div>
                 </div>
 
@@ -50,13 +50,18 @@
 
     <div id="übersicht-paragraph">
         <p>
-            Grobe Details zur Immobilie werden hier zu finden sein.<br />
+            {NAME} im Stadtteil {STADTTEIL}.<br />
+            Erbaut im Jahre {BAUJAHR}.<br />
             </p>
     </div>
 
     <div id="detail-paragraph">
         <p>
-            Alle Details zur Immobilie werden hier zu finden sein.<br />
+            Typ: {NAME}<br />
+            Miet-Preis: {PREIS}<br />
+            Nebenkosten: {NK}<br />
+            Baujahr: {BAUJAHR}<br />
+            Stadtteil: {STADTTEIL}<br />
             </p>
     </div>
 </main>
