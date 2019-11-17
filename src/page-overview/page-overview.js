@@ -30,23 +30,11 @@ class PageOverview {
 
         // Seite zur Anzeige bringen
         let pageDom = document.createElement("div");
-
+        pageDom.innerHTML = html;
 
         this._app.setPageTitle("ImmoFinder Karlsruhe");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
-    }
-
-    /**
-     * Hilfsmethode, welche den HTML-Code zur Darstellung der Kacheln auf
-     * der Startseite erzeugt.
-     *
-     * @param {HTMLElement} pageDom Wurzelelement der eingelesenen HTML-Datei
-     * mit den HTML-Templates dieser Seite.
-     */
-    _renderImmoTiles(pageDom) {
-        let mainElement = pageDom.querySelector("main");
-        let templateElement = pageDom.querySelector("#template-tile")
     }
 }

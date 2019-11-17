@@ -28,10 +28,6 @@ class App {
        window.addEventListener("hashchange", () => this._handleRouting());
        this._handleRouting();
 
-        // Klick auf das Hamburger-Menu abfangen
-        let menuIcon = document.querySelector("header nav .toggle-menu a");
-        menuIcon.addEventListener("click", this.toggleHamburgerMenu);
-
         // Klick auf den Zurück-Pfeil abfangen
         let backIcon = document.querySelector("header nav .go-back a");
         backIcon.addEventListener("click", () => window.history.back());
@@ -40,22 +36,8 @@ class App {
         let createButton = document.querySelector("#ImmoButton");
         createButton.addEventListener("click", () => location.hash = "/Formular/");
 
-        // Suchen button
-        let searchButton = document.querySelector("#SuchenButton");
-        searchButton.addEventListener("click", () => location.hash = "/Suche/");
-
     }
 
-    toggleHamburgerMenu() {
-        // Menü ein- oder ausblenden
-        let menuList = document.querySelector("header nav .menu-right");
-
-        if (menuList.classList.contains("small-screen-hidden")) {
-            menuList.classList.remove("small-screen-hidden");
-        } else {
-            menuList.classList.add("small-screen-hidden");
-        }
-    }
     // SinglePageRouter der die aktuelle URL auswertet und entscheidet welche Klasse aufgerufen werden soll
     _handleRouting() {
       let pageUrl = location.hash.slice(1); // alles was hinter Raute # steht
