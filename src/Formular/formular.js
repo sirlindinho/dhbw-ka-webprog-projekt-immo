@@ -84,7 +84,7 @@ class Formular {
 }
 
 // Nachricht speichern
- function saveMessage (firstname, lastname, email, tel, flaeche, zimmer, preis, nk, beschreibung){
+ function saveMessage (firstname, lastname, email, tel,immoname,idnummer, flaeche, zimmer, preis, nk,baujahr, beschreibung){
   var messagesRef = firebase.database().ref('messages');
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
