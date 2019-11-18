@@ -69,6 +69,7 @@ class Formular {
     var email = getInputValues('email');
     var tel = getInputValues('tel');
     var immoname = getInputValues('immoname');
+    var stadtteil = getInputValues('stadtteil');
     var idnummer = getInputValues('idnummer');
     var flaeche = getInputValues('flaeche');
     var zimmer = getInputValues('zimmer');
@@ -84,7 +85,7 @@ class Formular {
 }
 
 // Nachricht speichern
- function saveMessage (firstname, lastname, email, tel,immoname,idnummer, flaeche, zimmer, preis, nk,baujahr, beschreibung){
+ function saveMessage (firstname, lastname, email, tel,immoname,idnummer,stadtteil,flaeche, zimmer, preis, nk,baujahr, beschreibung){
   var messagesRef = firebase.database().ref('messages');
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
@@ -94,6 +95,7 @@ class Formular {
       telefon: tel,
       immoname: immoname,
       idnummer: idnummer,
+      stadtteil: stadtteil,
       flaeche: flaeche,
       zimmer: zimmer,
       preis: preis,
