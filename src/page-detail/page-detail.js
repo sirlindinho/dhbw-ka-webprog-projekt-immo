@@ -56,78 +56,37 @@ class PageDetail {
      */
     _processTemplate(html, number) {
 
+        var ref = firebase.database().ref('messages');
+        ref.on('value', gotData, errData);
+
+        function gotData(data){
+            var idnummer = new Array();
+            var messages = data.val();
+            var keys = Object.keys(messages);
+            console.log(keys);
+            for (var i = 0; i < keys.length; i++){
+                var k = keys[i];
+                idnummer[i] = messages[k].idnummer;
+                if(idnummer[i] == number){
+                    html = html.replace(/{IMG}/g, "immobilien/"+number+".jpg");
+                    html = html.replace(/{NAME}/g, messages[k].immoname);
+                    html = html.replace(/{PREIS}/g, messages[k].preis);
+                    html = html.replace(/{NK}/g, messages[k].nk);
+                    html = html.replace(/{BAUJAHR}/g, messages[k].baujahr);
+                    html = html.replace(/{STADTTEIL}/g, messages[k].stadtteil);
+
+                    console.log(messages[k].immoname, messages[k].preis, messages[k].nk, messages[k].baujahr, messages[k].stadtteil);
+                }
+            }
+        }
+
+        function errData(err){
+            console.log("Error!");
+            console.log(err);
+        }
+
         // Platzhalter mit den eingelesenen Daten ersetzen
         //html = html.replace(/{IMG}/g, this._data.img);
-        if(number == 1){
-        html = html.replace(/{IMG}/g, "immobilien/1.jpg");
-        html = html.replace(/{NAME}/g, "Einfamilienhaus");
-        html = html.replace(/{PREIS}/g, "1200€");
-        html = html.replace(/{NK}/g, "200€");
-        html = html.replace(/{BAUJAHR}/g, "1990");
-        html = html.replace(/{STADTTEIL}/g, "Waldstadt");}
-
-        else if(number == 2){
-            html = html.replace(/{IMG}/g, "immobilien/2.jpg");
-            html = html.replace(/{NAME}/g, "Einfamilienhaus");
-            html = html.replace(/{PREIS}/g, "1200€");
-            html = html.replace(/{NK}/g, "200€");
-            html = html.replace(/{BAUJAHR}/g, "1990");
-            html = html.replace(/{STADTTEIL}/g, "Waldstadt");
-        }
-
-        else if(number == 3){
-            html = html.replace(/{IMG}/g, "immobilien/3.jpg");
-            html = html.replace(/{NAME}/g, "Einfamilienhaus");
-            html = html.replace(/{PREIS}/g, "1200€");
-            html = html.replace(/{NK}/g, "200€");
-            html = html.replace(/{BAUJAHR}/g, "1990");
-            html = html.replace(/{STADTTEIL}/g, "Waldstadt");
-        }
-
-        else if(number == 4){
-            html = html.replace(/{IMG}/g, "immobilien/4.jpg");
-            html = html.replace(/{NAME}/g, "Einfamilienhaus");
-            html = html.replace(/{PREIS}/g, "1200€");
-            html = html.replace(/{NK}/g, "200€");
-            html = html.replace(/{BAUJAHR}/g, "1990");
-            html = html.replace(/{STADTTEIL}/g, "Waldstadt");
-        }
-
-        else if(number == 5){
-            html = html.replace(/{IMG}/g, "immobilien/5.jpg");
-            html = html.replace(/{NAME}/g, "Einfamilienhaus");
-            html = html.replace(/{PREIS}/g, "1200€");
-            html = html.replace(/{NK}/g, "200€");
-            html = html.replace(/{BAUJAHR}/g, "1990");
-            html = html.replace(/{STADTTEIL}/g, "Waldstadt");
-        }
-
-        else if(number == 6){
-            html = html.replace(/{IMG}/g, "immobilien/6.jpg");
-            html = html.replace(/{NAME}/g, "Einfamilienhaus");
-            html = html.replace(/{PREIS}/g, "1200€");
-            html = html.replace(/{NK}/g, "200€");
-            html = html.replace(/{BAUJAHR}/g, "1990");
-            html = html.replace(/{STADTTEIL}/g, "Waldstadt");
-        }
-
-        else if(number == 7){
-            html = html.replace(/{IMG}/g, "immobilien/7.jpg");
-            html = html.replace(/{NAME}/g, "Einfamilienhaus");
-            html = html.replace(/{PREIS}/g, "1200€");
-            html = html.replace(/{NK}/g, "200€");
-            html = html.replace(/{BAUJAHR}/g, "1990");
-            html = html.replace(/{STADTTEIL}/g, "Waldstadt");
-        }
-
-        else if(number == 8){
-            html = html.replace(/{IMG}/g, "immobilien/8.jpg");
-            html = html.replace(/{NAME}/g, "Einfamilienhaus");
-            html = html.replace(/{PREIS}/g, "1200€");
-            html = html.replace(/{NK}/g, "200€");
-            html = html.replace(/{BAUJAHR}/g, "1990");
-            html = html.replace(/{STADTTEIL}/g, "Waldstadt");
-        }
 
         // HTML-Template in echte DOM-Objekte umwandeln, damit wir es mit den
         // DOM-Methoden von JavaScript weiterbearbeiten können
